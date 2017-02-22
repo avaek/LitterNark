@@ -7,12 +7,215 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TableRow>
-            android:layout_width="90dp"
+        <TableRow
+            android:layout_weight="0.09"
+            android:layout_width="match_parent"
             android:layout_height="20dp"
+            android:id="@+id/row0">
 
             <TextView
-                android:text="Yo"/>
+                android:layout_weight="0.15"
+                android:text="@string/rank_col"
+                android:id="@+id/col_head_1" />
+            <TextView
+                android:layout_weight="0.6"
+                android:text="@string/comp_col"
+                android:id="@+id/col_head_2" />
+            <TextView
+                android:layout_weight="0.25"
+                android:text="@string/nark_col"
+                android:id="@+id/col_head_3" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="0.09"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/row1">
+
+            <TextView
+                android:layout_weight="0.15"
+                android:text="1st"/>
+            <TextView
+                android:layout_weight="0.6"
+                android:text="Mc Donalds"
+                android:id="@+id/comp_1" />
+            <TextView
+                android:layout_weight="0.25"
+                android:text="100"
+                android:id="@+id/narks_1" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="0.09"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/row2">
+
+            <TextView
+                android:layout_weight="0.15"
+                android:text="2nd"/>
+            <TextView
+                android:layout_weight="0.6"
+                android:text="Coca Cola"
+                android:id="@+id/comp_2" />
+            <TextView
+                android:layout_weight="0.25"
+                android:text="96"
+                android:id="@+id/narks_2" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="0.09"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/row3">
+
+            <TextView
+                android:layout_weight="0.15"
+                android:text="3rd"/>
+            <TextView
+                android:layout_weight="0.6"
+                android:text="Monster Energy Drink"
+                android:id="@+id/comp_3" />
+            <TextView
+                android:layout_weight="0.25"
+                android:text="84"
+                android:id="@+id/narks_3" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="0.09"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/row4">
+
+            <TextView
+                android:layout_weight="0.15"
+                android:text="4th"/>
+            <TextView
+                android:layout_weight="0.6"
+                android:text="New World"
+                android:id="@+id/comp_4" />
+            <TextView
+                android:layout_weight="0.25"
+                android:text="75"
+                android:id="@+id/narks_4" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="0.09"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/row5">
+
+            <TextView
+                android:layout_weight="0.15"
+                android:text="5th"/>
+            <TextView
+                android:layout_weight="0.6"
+                android:text="Cigarettes"
+                android:id="@+id/comp_5" />
+            <TextView
+                android:layout_weight="0.25"
+                android:text="63"
+                android:id="@+id/narks_5" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="0.09"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/row6">
+
+            <TextView
+                android:layout_weight="0.15"
+                android:text="6th"/>
+            <TextView
+                android:layout_weight="0.6"
+                android:text="Tui"
+                android:id="@+id/comp_6" />
+            <TextView
+                android:layout_weight="0.25"
+                android:text="51"
+                android:id="@+id/narks_6" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="0.09"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/row7">
+
+            <TextView
+                android:layout_weight="0.15"
+                android:text="7th"/>
+            <TextView
+                android:layout_weight="0.6"
+                android:text="Burger King"
+                android:id="@+id/comp_7" />
+            <TextView
+                android:layout_weight="0.25"
+                android:text="49"
+                android:id="@+id/narks_7" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="0.09"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/row8">
+
+            <TextView
+                android:layout_weight="0.15"
+                android:text="8th"/>
+            <TextView
+                android:layout_weight="0.6"
+                android:text="Starbucks"
+                android:id="@+id/comp_8" />
+            <TextView
+                android:layout_weight="0.25"
+                android:text="30"
+                android:id="@+id/narks_8" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="0.09"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/row9">
+
+            <TextView
+                android:layout_weight="0.15"
+                android:text="9th"/>
+            <TextView
+                android:layout_weight="0.6"
+                android:text="Tinder for Cannibals"
+                android:id="@+id/comp_9" />
+            <TextView
+                android:layout_weight="0.25"
+                android:text="22"
+                android:id="@+id/narks_9" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="0.09"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:id="@+id/row10">
+
+            <TextView
+                android:layout_weight="0.15"
+                android:text="10th"/>
+            <TextView
+                android:layout_weight="0.6"
+                android:text="Cadbury"
+                android:id="@+id/comp_10" />
+
+            <TextView
+                android:layout_weight="0.25"
+                android:text="18"
+                android:id="@+id/narks_10" />
         </TableRow>
 
     </TableLayout>
