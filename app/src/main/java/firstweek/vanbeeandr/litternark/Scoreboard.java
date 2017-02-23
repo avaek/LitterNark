@@ -58,8 +58,28 @@ public class Scoreboard {
         int maxNarks = -1;
         String maxComp = "";
 
+        for(int i = 0; i < 10; i++){
+            for(int j = 0; j < 10; j++){
+                maxNarks = -1;
+                String narkStr = oldScores[j][1];
+                int currNarks = Integer.parseInt(narkStr);
 
+                if(currNarks > maxNarks){
+                    maxNarks = currNarks;
+                    maxComp = oldScores[j][0];
+                }
+            }
 
+            newScores[i][0] = maxComp;
+            newScores[i][0] = "" + maxNarks;
+
+            for(int k = 0; k < 10; k++){
+                String removeComp = oldScores[k][0];
+                if(removeComp.equals(maxComp)){
+                    oldScores[k][1] = "" + -1;
+                }
+            }
+        }
 
         return newScores;
     }
