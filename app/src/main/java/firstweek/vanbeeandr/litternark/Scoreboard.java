@@ -29,7 +29,7 @@ public class Scoreboard {
             for(int j = 0; j < 2; j++){
 
                 if(j == 1){
-                    input = "0";
+                    input = "1";
                 }
 
                 scoreArray[i][j] = input;
@@ -56,14 +56,13 @@ public class Scoreboard {
         return scoreArray;
     }
 
-    public String[][] reorderScores(String[][] oldScores){
+    public static String[][] reorderScores(String[][] oldScores){
         String[][] newScores = new String[10][2];
         int maxNarks = -1;
         String maxComp = "";
 
         for(int i = 0; i < 10; i++){
             for(int j = 0; j < 10; j++){
-                maxNarks = -1;
                 String narkStr = oldScores[j][1];
                 int currNarks = Integer.parseInt(narkStr);
 
@@ -74,7 +73,8 @@ public class Scoreboard {
             }
 
             newScores[i][0] = maxComp;
-            newScores[i][0] = "" + maxNarks;
+            newScores[i][1] = "" + maxNarks;
+            maxNarks = -1;
 
             for(int k = 0; k < 10; k++){
                 String removeComp = oldScores[k][0];

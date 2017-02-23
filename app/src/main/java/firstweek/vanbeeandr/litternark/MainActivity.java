@@ -27,11 +27,13 @@ public class MainActivity extends AppCompatActivity {
     String mCurrentPhotoPath;
     static final int REQUEST_TAKE_PHOTO = 1;
     static int tracker = 6;
+    public String[][] records = Scoreboard.initArray();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        records = Scoreboard.initArray();
         setUpSplash();
 
     }
@@ -59,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
     //all the code for scoreboard layout in here
     private void setUpScoreboard() {
         setContentView(R.layout.scoreboard_layout);
+        records = Scoreboard.reorderScores(records);
+        Scoreboard.matchTable(records, this);
     }
 
     //current rule: when back is pressed always goes back to the splash screen
@@ -87,7 +91,8 @@ public class MainActivity extends AppCompatActivity {
         mcdsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.gallery);
+                setContentView(R.layout.gallery_layout);
+                records = Scoreboard.updateNark(records, "Mc Donalds");
             }
         });
 
