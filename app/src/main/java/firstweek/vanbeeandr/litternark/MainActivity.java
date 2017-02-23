@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //all the code for splash screen in here
     private void setUpSplash() {
         setContentView(R.layout.activity_main);
         Button upload = (Button) findViewById(R.id.takePic);
@@ -47,10 +48,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //all the code for scoreboard layout in here
     private void setUpScoreboard() {
         setContentView(R.layout.scoreboard_layout);
     }
 
+    //current rule: when back is pressed always goes back to the splash screen
     @Override
     public void onBackPressed() {
         setUpSplash();
