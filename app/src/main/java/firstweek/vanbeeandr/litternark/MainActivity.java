@@ -10,11 +10,15 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-<<<<<<< HEAD
-=======
+        setUpSplash();
+
+    }
+
+    private void setUpSplash() {
         setContentView(R.layout.activity_main);
         Button upload = (Button) findViewById(R.id.takePic);
         upload.setOnClickListener(new View.OnClickListener() {
@@ -23,7 +27,23 @@ public class MainActivity extends AppCompatActivity {
                 dispatchTakePictureIntent();
             }
         });
->>>>>>> e92e9a99221dc62a28184e710e570b6b20b7e776
+
+        Button scoreboard_redirect = (Button) findViewById(R.id.scoreboard_button_redirect);
+        scoreboard_redirect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setUpScoreboard();
+            }
+        });
+    }
+
+    private void setUpScoreboard() {
+        setContentView(R.layout.scoreboard_layout);
+    }
+
+    @Override
+    public void onBackPressed() {
+        setUpSplash();
     }
 
     private void dispatchTakePictureIntent() {
