@@ -15,8 +15,8 @@ public class Scoreboard {
 
         for(int i = 0; i < 10; i++){
 
-            if(i == 0) input = "Mc Donalds";
-            if(i == 1) input = "Coca Cola";
+            if(i == 0) input = "Coca Cola";
+            if(i == 1) input = "Mc Donalds";
             if(i == 2) input = "Monster Energy Drink";
             if(i == 3) input = "New World";
             if(i == 4) input = "Cigarettes";
@@ -79,7 +79,7 @@ public class Scoreboard {
             for(int k = 0; k < 10; k++){
                 String removeComp = oldScores[k][0];
                 if(removeComp.equals(maxComp)){
-                    oldScores[k][1] = "" + -1;
+                    oldScores[k][1] = "-1";
                 }
             }
         }
