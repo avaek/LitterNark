@@ -20,9 +20,15 @@ public class MainActivity extends AppCompatActivity {
     String mCurrentPhotoPath;
     static final int REQUEST_TAKE_PHOTO = 1;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setUpSplash();
+
+    }
+
+    private void setUpSplash() {
         setContentView(R.layout.activity_main);
         Button upload = (Button) findViewById(R.id.takePic);
         upload.setOnClickListener(new View.OnClickListener() {
@@ -31,6 +37,23 @@ public class MainActivity extends AppCompatActivity {
                 dispatchTakePictureIntent();
             }
         });
+
+        Button scoreboard_redirect = (Button) findViewById(R.id.scoreboard_button_redirect);
+        scoreboard_redirect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setUpScoreboard();
+            }
+        });
+    }
+
+    private void setUpScoreboard() {
+        setContentView(R.layout.scoreboard_layout);
+    }
+
+    @Override
+    public void onBackPressed() {
+        setUpSplash();
     }
 
     private void dispatchTakePictureIntent() {
