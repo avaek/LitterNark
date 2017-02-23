@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     String mCurrentPhotoPath;
     static final int REQUEST_TAKE_PHOTO = 1;
+    static int tracker = 6;
 
 
     @Override
@@ -63,9 +65,16 @@ public class MainActivity extends AppCompatActivity {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
-
+            tracker++;
+            changeImage();
         }
 //        dispatchSavePictureIntent();
+    }
+
+    private void changeImage(){
+
+        ImageView imageToChange = (ImageView)findViewById(R.id.imageView7);
+
     }
 
 
